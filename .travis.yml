@@ -13,6 +13,7 @@ cache:
 branches:
   only:
     - master
+    - /^greenkeeper/.*$/
 
 before_script:
   # ensure we are testing against latest versions of all deps when using Yarn
