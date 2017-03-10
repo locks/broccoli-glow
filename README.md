@@ -1,5 +1,7 @@
 # broccoli-glow
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/locks/broccoli-glow.svg)](https://greenkeeper.io/)
+
 Summarize what broccoli-glow does here.
 
 ## Usage
