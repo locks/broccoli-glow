@@ -22,7 +22,25 @@ describe('BroccoliGlow', function() {
 
   it('should build', async function() {
     input.write({
-      // Your fixture directory structure
+      'component.md': `
+There's some JavaScript in this component:
+
+\`\`\`js
+import Component from '@glimmer/component';
+
+export default class HelloWorld extends Component {
+  constructor(args) {
+    this.super();
+  }
+}
+\`\`\`
+
+As well as a little bit of template:
+
+\`\`\`hbs
+<h1>Hello World</h1>
+\`\`\`
+`
     });
 
     let node = new BroccoliGlow(input.path(), {
@@ -33,6 +51,16 @@ describe('BroccoliGlow', function() {
 
     expect(output.read()).to.deep.equal({
       // Your transformed directory structure
+      'component.js': `import Component from '@glimmer/component';
+
+export default class HelloWorld extends Component {
+  constructor(args) {
+    this.super();
+  }
+}
+`,
+      'template.hbs': `<h1>Hello World</h1>
+`
     });
 
     output = await output.rebuild();
