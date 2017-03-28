@@ -18,8 +18,7 @@
   ],
   "author": "",
   "license": "MIT",
-  "repository": {
-  },
+  "repository": {},
   "homepage": "",
   "files": [
     "dist/",
@@ -43,6 +42,7 @@
     "broccoli-plugin": "^1.2.1",
     "fs-tree-diff": "^0.5.2",
     "heimdalljs": "^0.2.1",
-    "heimdalljs-logger": "^0.1.7"
+    "heimdalljs-logger": "^0.1.7",
+    "markdown-it": "^8.3.1"
   }
 }
